@@ -12,25 +12,6 @@ class Products{
     public $Name;
     public $Prezzo;
 
-
-    /**
-     * Get the value of Titolo
-     */
-    public function getName()
-    {
-        return $this->Name;
-    }
-
-    /**
-     * Set the value of Titolo
-     */
-    public function setName($Name): self
-    {
-        $this->Titolo = $Name;
-
-        return $this;
-    }
-
     /**
      * Get the value of Prezzo
      */
@@ -48,8 +29,25 @@ class Products{
 
         return $this;
     }
+
+    /**
+     * Get the value of Name
+     */
+    public function getName()
+    {
+        return $this->Name;
+    }
+
+    /**
+     * Set the value of Name
+     */
+    public function setName($Name): self
+    {
+        $this->Name = $Name;
+
+        return $this;
+    }
 }
 
-$prodotto1
 
 ?>

@@ -9,24 +9,24 @@ Il pagamento avviene con la carta di credito, che non deve essere scaduta.
 <?php
 class Products{
 
-    public $Titolo;
+    public $Name;
     public $Prezzo;
 
 
     /**
      * Get the value of Titolo
      */
-    public function getTitolo()
+    public function getName()
     {
-        return $this->Titolo;
+        return $this->Name;
     }
 
     /**
      * Set the value of Titolo
      */
-    public function setTitolo($Titolo): self
+    public function setName($Name): self
     {
-        $this->Titolo = $Titolo;
+        $this->Titolo = $Name;
 
         return $this;
     }
@@ -50,5 +50,6 @@ class Products{
     }
 }
 
+$prodotto1
 
 ?>

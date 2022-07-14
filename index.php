@@ -2,6 +2,7 @@
 require_once "categories/products.php";
 require_once "categories/giochi.php";
 require_once "categories/cucce.php";
+require_once "user.php";
 
 
 // added snack and food for dog
@@ -15,13 +16,17 @@ $DogToy2 = new Giochi("Trixie Doppia Corda",5,"rixie doppia corda gioco per cani
 // added dog kennel
 $DogKennel = new Cucce("Mini: L 72 x P 41 x H 51 cm","Trasportino per auto Ferplast Atlas Car",59,"Trasportino per auto Ferplast Atlas Car per il trasporto sicuro del cane, con porta rimovibile con griglia per un facile accesso, maniglie e tappetino igienico");
 
+// added user
+$user= new User("Paolo Pugliese","paolo.pugliese@gmail.com",true);
+$user2= new User("Matteo Bianchi","matteo.bianchi@gmail.com",false);
 
 var_dump($Snack);
 var_dump($CrocchetteCani);
 var_dump($DogToy1);
 var_dump($DogToy2);
 var_dump($DogKennel);
-
+var_dump($user);
+var_dump($user2);
 
 
 ?>

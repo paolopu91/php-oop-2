@@ -1,12 +1,18 @@
 <?php
-
+require_once "categories/products.php";
 class User{
     private $FullName;
     private $Email;
+    private $registered;
     private $discount;
-    private $CreditCard;
 
-    
+    function __construct($_fullname,$_email,$_registered)
+    {
+        $this->setFullName($_fullname);
+        $this->setEmail($_email);
+        $this->setRegistered($_registered);
+    }
+
 
     /**
      * Get the value of FullName
@@ -45,38 +51,23 @@ class User{
     }
 
     /**
-     * Get the value of discount
+     * Get the value of registered
      */
-    public function getDiscount()
+    public function getRegistered()
     {
-        return $this->discount;
+        return $this->registered;
     }
 
     /**
-     * Set the value of discount
+     * Set the value of registered
      */
-    public function setDiscount($discount): self
+    public function setRegistered( $_registered )
     {
-        $this->discount = $discount;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of CreditCard
-     */
-    public function getCreditCard()
-    {
-        return $this->CreditCard;
-    }
-
-    /**
-     * Set the value of CreditCard
-     */
-    public function setCreditCard($CreditCard): self
-    {
-        $this->CreditCard = $CreditCard;
-
-        return $this;
+        if($_registered === true){
+            $this->discount = 0.2;
+        }else{
+            $this->discount= 0;
+            echo  "<h4>Registrati per ricevere lo sconto del 20%</h4>";
+        }
     }
 }

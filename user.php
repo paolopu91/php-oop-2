@@ -5,6 +5,10 @@ class User{
     private $Email;
     private $registered;
     private $discount;
+    private $cart;
+    private $UserPaymentMethod;
+
+    
 
     function __construct($_fullname,$_email,$_registered)
     {
@@ -87,5 +91,45 @@ class User{
         $this->discount = $discount;
 
         return $this;
+    }
+
+    /**
+     * Get the value of cart
+     */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+     * Set the value of cart
+     */
+    public function setCart($product): self
+    {
+        if ($product instanceof Products)
+        $this->cart[] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of UserPaymentMethod
+     */
+    public function getUserPaymentMethod()
+    {
+        return $this->UserPaymentMethod;
+    }
+
+    /**
+     * Set the value of UserPaymentMethod
+     */
+    public function setUserPaymentMethod($UserPaymentMethod): self
+    {
+        
+            if ($UserPaymentMethod instanceof UserPayment){
+                $this->UserPaymentMethod = $UserPaymentMethod;
+            }
+    
+            return $this;
     }
 }

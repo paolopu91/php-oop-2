@@ -2,10 +2,8 @@
 require_once "categories/products.php";
 require_once "categories/giochi.php";
 require_once "categories/cucce.php";
-require_once "user.php";
 require_once "UserPayment.php";
-require_once "cart.php";
-
+require_once "user.php";
 
 // added snack and food for dog
 $Snack = new Products("Wolf of Wilderness - Orecchie di cervo Premium",10);
@@ -22,11 +20,26 @@ $DogKennel = new Cucce("Mini: L 72 x P 41 x H 51 cm","Trasportino per auto Ferpl
 $user= new User("Paolo Pugliese","paolo.pugliese@gmail.com",true);
 $user2= new User("Matteo Bianchi","matteo.bianchi@gmail.com",false);
 
+
+// Added cart
+$user->setCart($Snack)->setCart($CrocchetteCani);
+$user2->setCart($CrocchetteCani);
+
+// added paymentMethod
+$user->setUserPaymentMethod(new UserPayment("14264068",10-22));
+$user2->setUserPaymentMethod(new UserPayment("59000045643", 4-30));
+
+
+
+
 var_dump($Snack);
 var_dump($CrocchetteCani);
+
 var_dump($DogToy1);
 var_dump($DogToy2);
+
 var_dump($DogKennel);
+
 var_dump($user);
 var_dump($user2);
 

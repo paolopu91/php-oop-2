@@ -12,6 +12,11 @@ class Products{
     public $Name;
     public $Prezzo;
 
+    function __construct($_name,$_prezzo)
+    {
+        $this->setName($_name);
+        $this->setPrezzo($_prezzo);
+    }
     /**
      * Get the value of Prezzo
      */

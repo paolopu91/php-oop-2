@@ -70,4 +70,22 @@ class User{
             echo  "<h4>Registrati per ricevere lo sconto del 20%</h4>";
         }
     }
+
+    /**
+     * Get the value of discount
+     */
+    public function getDiscount()
+    {
+        return $this->discount;
+    }
+
+    /**
+     * Set the value of discount
+     */
+    public function setDiscount($discount): self
+    {
+        $this->discount = $discount;
+
+        return $this;
+    }
 }

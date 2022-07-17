@@ -18,12 +18,14 @@ $DogKennel = new Cucce("Mini: L 72 x P 41 x H 51 cm","Trasportino per auto Ferpl
 
 // added user
 $user= new User("Paolo Pugliese","paolo.pugliese@gmail.com",true);
-$user2= new User("Matteo Bianchi","matteo.bianchi@gmail.com",false);
+$user2= new User("Matteo Bianchi","matteo.bianchi@gmail.com",true);
 
 
 // Added cart
-$user->setCart($Snack)->setCart($CrocchetteCani);
+$user->setCart($Snack);
+
 $user2->setCart($CrocchetteCani);
+
 
 // added paymentMethod
 $user->setUserPaymentMethod(new UserPayment("14264068",10-22));
@@ -32,13 +34,13 @@ $user2->setUserPaymentMethod(new UserPayment("59000045643", 4-30));
 
 
 
-var_dump($Snack);
-var_dump($CrocchetteCani);
+// var_dump($Snack);
+// var_dump($CrocchetteCani);
 
-var_dump($DogToy1);
-var_dump($DogToy2);
+// var_dump($DogToy1);
+// var_dump($DogToy2);
 
-var_dump($DogKennel);
+// var_dump($DogKennel);
 
 var_dump($user);
 var_dump($user2);

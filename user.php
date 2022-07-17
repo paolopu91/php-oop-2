@@ -5,7 +5,7 @@ class User{
     private $Email;
     private $registered;
     private $discount;
-    private $cart;
+    private $cart=[];
     private $UserPaymentMethod;
 
     
@@ -69,9 +69,10 @@ class User{
     {
         if($_registered === true){
             $this->discount = 0.2;
+            echo "<h4>L'utente è registrato correttamente</h4>";
         }else{
             $this->discount= 0;
-            echo  "<h4>Registrati per ricevere lo sconto del 20%</h4>";
+            throw new Exception("L'utente non è registrato correttamente");
         }
     }
 
@@ -108,7 +109,6 @@ class User{
     {
         if ($product instanceof Products)
         $this->cart[] = $product;
-
         return $this;
     }
 

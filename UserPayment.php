@@ -29,7 +29,7 @@ class UserPayment{
 
     public function setExpDate($_expDate)
     {   
-        $cardDate = DateTime::createFromFormat('m-y', $_expDate);
+        $cardDate = DateTime::createFromFormat('m/y', $_expDate);
         $dateNow = new DateTime('now');
         if($cardDate > $dateNow){
             $this->ExpDate = $_expDate;

@@ -43,8 +43,12 @@ $user2->setUserPaymentMethod(new UserPayment("59000045643", 4-30));
 // var_dump($DogKennel);
 
 var_dump($user);
+
+var_dump("____________________________________________________________________________________________________");
+
 var_dump($user2);
 
-var_dump("_______________________");
+
+
 
 ?>
